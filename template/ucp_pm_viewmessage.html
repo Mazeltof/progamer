@@ -5,7 +5,6 @@
 	</div>
 </div>
 
-
 <!-- IF S_DISPLAY_HISTORY and (U_VIEW_PREVIOUS_HISTORY or U_VIEW_NEXT_HISTORY) -->
 	<fieldset class="display-options clearfix">
 		<!-- IF U_VIEW_PREVIOUS_HISTORY -->
@@ -19,14 +18,14 @@
 			</a>
 		<!-- ENDIF -->
 	</fieldset>
-<!-- ENDIF -->
+    <!-- ENDIF -->
 
+    <div id="post-{MESSAGE_ID}" class="post pm has-profile<!-- IF S_ONLINE --> online<!-- ENDIF -->">
+    <div class="inner">
 
-<div id="post-{MESSAGE_ID}" class="post pm has-profile<!-- IF S_POST_UNAPPROVED or S_POST_REPORTED --> reported<!-- ENDIF -->>">
-<div class="inner">
 		<!-- IF S_ONLINE --><span class="online-text">{L_ONLINE}</span><!-- ENDIF -->
 
-	<dl class="postprofile" id="profile{MESSAGE_ID}">
+    	<dl class="postprofile" id="profile{MESSAGE_ID}">
 		<dt class="<!-- IF RANK_TITLE or RANK_IMG -->has-profile-rank<!-- ELSE -->no-profile-rank<!-- ENDIF --> <!-- IF AUTHOR_AVATAR -->has-avatar<!-- ELSE -->no-avatar<!-- ENDIF -->">
 			<div class="avatar-container">
 				<!-- EVENT ucp_pm_viewmessage_avatar_before -->
@@ -131,6 +130,7 @@
 			<!-- IF S_BCC_RECIPIENT --><br /><strong>{L_BCC}{L_COLON}</strong> <!-- BEGIN bcc_recipient --><!-- IF bcc_recipient.NAME_FULL -->{bcc_recipient.NAME_FULL}<!-- ELSE --><a href="{bcc_recipient.U_VIEW}"<!-- IF bcc_recipient.COLOUR --> style="color:{bcc_recipient.COLOUR};"<!-- ENDIF -->><strong>{bcc_recipient.NAME}</strong></a><!-- ENDIF -->&nbsp;<!-- END bcc_recipient --><!-- ENDIF -->
 		</p>
 
+		{% EVENT ucp_pm_viewmessage_message_content_before %}
 
 		<div class="content">{MESSAGE}</div>
 

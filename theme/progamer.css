@@ -1,11 +1,4 @@
-/**  -----------------------------------------------------------------
-	Style name:			progamer
-	Inherited from:		prosilver (the default phpBB 3.2.x style)
-	Original author:	phpBB Limited ( https://www.phpbb.com/ )
-	Modified by:		Mazeltof ( https://www.mazeland.fr/ )
------------------------------------------------------------------  **/
-
-/**  base.css  --------------------------------------------------  **/
+@charset "utf-8";
 
 /**  common.css  ------------------------------------------------  **/
 /* General Markup Styles */
@@ -934,7 +927,7 @@ fieldset.polls dd div {
 .phpbb_facebook-icon				{ background-position: -119px 0; }
 .phpbb_googleplus-icon				{ background-position: -140px 0; }
 .phpbb_skype-icon					{ background-position: -161px 0; }
-.phpbb_twitter-icon					{ background-position: -203px 0; }
+.phpbb_twitter-icon					{ background-position: -202px 0; }
 .phpbb_yahoo-icon					{ background-position: -224px 0; }
 
 a:hover .pm-icon						{ background-position: 0 -16px; }
@@ -948,7 +941,7 @@ a:hover .phpbb_youtube-icon			{ background-position: -98px -16px; }
 a:hover .phpbb_facebook-icon			{ background-position: -119px -16px; }
 a:hover .phpbb_googleplus-icon		{ background-position: -140px -16px; }
 a:hover .phpbb_skype-icon			{ background-position: -161px -16px; }
-a:hover .phpbb_twitter-icon			{ background-position: -203px -16px; }
+a:hover .phpbb_twitter-icon			{ background-position: -202px -16px; }
 a:hover .phpbb_yahoo-icon			{ background-position: -224px -16px; }
 /* Forum icons & Topic icons */
 .global_read						{ background-image: url("./images/announce_read.svg"); }
@@ -1600,4 +1593,59 @@ table.table1 thead tr {
 }
 table.table1 thead th a {
 	padding: 0 0 0 7px;
+}
+
+/* Extension Board Annoucements 1.3.1 ( https://www.phpbb.com/customise/db/extension/boardannouncements/ ) */
+.progamer .phpbb_announcement {
+	background-color: rgba(152, 86, 92, 0.50);
+	border-radius: 0;
+}
+/** Extension Board Rules 3.1.0 ( https://www.phpbb.com/customise/db/extension/boardrules/ ) **/
+.progamer .boardrules-container h2 {
+	margin: .5em 0 .5em;
+}
+.progamer .boardrules-container .content {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 0;
+	color: rgb(255, 255, 255);
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.2em;
+	padding: 20px 10px;
+	margin-bottom: 5px;
+}
+.progamer .boardrules-categories {
+	margin: 44px 0 4px 4px;
+}
+.progamer .boardrules-categories .mini-panel {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 0;
+	color: rgb(255, 255, 255);
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 4px;
+	padding: 5px 10px;
+}
+.progamer .highlight {
+	background-color: rgba(152, 86, 92, 0.50);
+	border-radius: 0;
+	color: rgb(255, 255, 255);
+	font-weight: inherit;
+}
+.progamer .rule-anchor.postlink {
+	background: 0;
+	border: 0;
+}
+@media (max-width:700px) {
+	.progamer .boardrules-categories, .rtl .progamer .boardrules-categories {
+		text-align: center;
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+}
+
+/** Extension Collapsible Forum Categories 2.1.0 ( https://www.phpbb.com/customise/db/extension/collapsible_forum_categories/ ) **/
+.progamer .collapse-btn {
+	margin: -30px 15px 0
 }
